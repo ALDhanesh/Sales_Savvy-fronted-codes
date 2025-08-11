@@ -1,0 +1,66 @@
+/* Center the content */
+.welcome-page {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  background-color: #f0f0f0; /* Light grey background for the whole page */ 
+}
+
+.welcome-container {
+  min-height: 50vh;  /* Full height */
+  width: 50vw;       /* Full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 15px;
+  color: black;
+  border-style: groove;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+/* Title */
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black; /* Change text to white for visibility */
+  margin-bottom: 30px;
+}
+
+.welcome-title span {
+  color: #ff6f3c; /* Ecommerce brand-like orange */
+}
+
+/* Links container */
+.welcome-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Button-style links */
+.welcome-btn {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #ff6f3c;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.welcome-btn:hover {
+  background: #e65c28;
+  transform: translateY(-2px);
+}
+
+/* Secondary button */
+.welcome-btn.secondary {
+  background: #4cafef;
+}
+
+.welcome-btn.secondary:hover {
+  background: #3a9cd6;
+}
