@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
+
 export default function SignIn() {
 
     const navigate = useNavigate();
@@ -26,17 +27,17 @@ export default function SignIn() {
             )
     }
     return (
-        <div class = "signin-container">
+        <div class = "container">
             <h3>Sign In</h3>
 
-            <form onSubmit={handleClick}>
+            <form className="form-container" onSubmit={handleClick}>
                 <label htmlFor="username">Username:</label>
                 <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} /> <br /><br />
 
                 <label htmlFor="password">Password</label>
                 <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br /><br />
 
-                <button type='submit'>Log in</button>
+                <button className="btn btn-primary" type='submit'>Log in</button>
             </form>
         </div>
     )

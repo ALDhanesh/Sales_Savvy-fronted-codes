@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import './style.css';
 
 export default function Customer() {
 
@@ -17,30 +18,39 @@ export default function Customer() {
   }
 
   return (
-    <div>
-        <h1>Customer</h1>
+    <div className="customer-container">
+      <h1>Customer</h1>
+      <div className="product-grid">
+        {products && products.map(p => (
+          <div className="product-card" key={p.id}>
 
-       {products && products.map(p => (
-        <div key={p.id}>
-          <p><strong>ID:</strong> {p.id}</p>
+            <div className="product-details">
+              <p><strong>ID:</strong> {p.id}</p>
 
-          <p><strong>Name:</strong> {p.name}</p>
+              <p><strong>Name:</strong> {p.name}</p>
 
-          <p><strong>Description:</strong> {p.description}</p>
+              <p><strong>Description:</strong> {p.description}</p>
 
-          <p><strong>Price:</strong> ₹{p.price}</p>
+              <p className="price"><strong>Price:</strong> ₹{p.price}</p>
 
-          <p><strong>Category:</strong> {p.category}</p>
+              <p className="category"><strong>Category:</strong> {p.category}</p>
+            </div>
 
-          {p.image && (
-            <img
-              src={p.image}
-              alt={p.name}
+
+            {p.image && (
+              <img
+                src={p.image}
+                alt={p.name}
+                className='product-image'
               style={{ width: '200px', marginTop: '10px' }}
-            />
-          )}
-        </div>
-       ))}
+              />
+            )}
+            <button type='submit'>Add to cart</button>
+          </div>
+          
+        ))}
+      </div>
+
     </div>
   )
 }
