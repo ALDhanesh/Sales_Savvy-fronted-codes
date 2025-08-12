@@ -10,6 +10,7 @@ export default function UpdateUser() {
 
   const [username, setUsername] = useState(user.username || '');
   const [email, setEmail] = useState(user.email || '');
+  const [password, setPassword] = useState(user.password || '');
   const [gender, setGender] = useState(user.gender|| '');
   const [dob, setDob] = useState(user.dob || '');
   const [role, setRole] = useState(user.role || '');
@@ -17,9 +18,9 @@ export default function UpdateUser() {
   const updateClick = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:8080/updateUser' , {
-      id: user.id, username, email, gender, dob, role
-    })
+    const userdata = {id : user.id, username, email, password,  gender, dob, role}
+
+    axios.post('http://localhost:8080/updateUser' , userdata)
     .then(() => {
       alert("successfully updated");
       navigate('/userManagement');

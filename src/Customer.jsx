@@ -6,10 +6,10 @@ export default function Customer() {
 
   const [products, setProducts] = useState([]);
 
-  useEffect(() => { fetchUsers() }, []);
+  useEffect(() => { fetchProducts() }, []);
 
   //fetch the data from the backend
-  const fetchUsers = () => {
+  const fetchProducts = () => {
     axios.get('http://localhost:8080/getAllProducts')
       .then(res => {
         setProducts(res.data);

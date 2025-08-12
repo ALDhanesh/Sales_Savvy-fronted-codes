@@ -54,10 +54,10 @@ export default function SignUP() {
 
           <br />
           <div className="radio-group">
-            <label htmlFor="gender">Gender:</label>
-            <label><input type="radio" id='gender' name="gender" value="MALE" onChange={e => setGender(e.target.value)} required /> Male</label>
-            <label><input type="radio" id='gender' name="gender" value="FEMALE" onChange={e => setGender(e.target.value)} /> Female</label>
-            <label><input type="radio" id='gender' name="gender" value="OTHER" onChange={e => setGender(e.target.value)} /> Others</label>
+            <label>Gender:</label>
+            <label htmlFor='male'><input type="radio" id='male' name="gender" value="MALE" onChange={e => setGender(e.target.value)} required /> Male</label>
+            <label htmlFor='female'><input type="radio" id='female' name="gender" value="FEMALE" onChange={e => setGender(e.target.value)} /> Female</label>
+            <label htmlFor='others'><input type="radio" id='others' name="gender" value="OTHER" onChange={e => setGender(e.target.value)} /> Others</label>
           </div>
           <br />
           <div>
@@ -67,9 +67,9 @@ export default function SignUP() {
 
           <br />
           <div className="radio-group">
-            <label htmlFor="role">Role:</label>
-            <label><input type="radio" id='role' name="role" value="admin" onChange={e => setRole(e.target.value)} required /> Admin</label>
-            <label><input type="radio" id='role' name="role" value="customer" onChange={e => setRole(e.target.value)} /> Customer</label>
+            <label>Role:</label>
+            <label htmlFor="admin"><input type="radio" id='admin' name="role" value="admin" onChange={e => setRole(e.target.value)} required /> Admin</label>
+            <label htmlFor="customer"><input type="radio" id='customer' name="role" value="customer" onChange={e => setRole(e.target.value)} /> Customer</label>
           </div>
           <br />
           <button type='submit'>Submit</button>
